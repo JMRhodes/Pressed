@@ -1,0 +1,42 @@
+
+/* Navigation
+----------------------------------------------- */
+
+.main-navigation {
+	display: block;
+	
+	ul {
+		
+		li {
+			display: inline-block;
+			
+			a {
+				margin: 0 5px;
+				padding: 0.5em;
+			}
+			
+			.children,
+			.sub-menu {
+				display: none;
+				position: absolute;
+				min-width: 140px;
+				width: auto;
+				z-index: 10;
+				overflow: hidden;
+				background: $white;
+				
+				li {
+					display: block;
+					float: none;
+				}
+			}
+			
+			&:hover {
+				
+				ul {
+					display: block;
+				}
+			}
+		}
+	}
+}
