@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="site">
+<div id="page">
 
 	<header id="masthead" class="site-header col-sm-12" role="banner">
 		<div class="container">
@@ -44,6 +44,3 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-
-	<div class="container">
-		<div class="row">

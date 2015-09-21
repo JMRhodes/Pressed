@@ -5,8 +5,6 @@
  * @package Presser
  */
 ?>	
-	</div><!-- .row -->
-	</div><!-- .container -->
 	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
