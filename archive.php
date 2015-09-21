@@ -9,29 +9,36 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-sm-8 content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container">
+	<div class="row">
 
-		<?php if ( have_posts() ) : ?>
+		<div id="primary" class="col-sm-8 content-area">
+			<main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<?php presser_archives_title( '<h1 class="page-title">', '</h1>' ); ?></h1>
-			</header><!-- .page-header -->
+			<?php if ( have_posts() ) : ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				<header class="page-header">
+					<?php presser_archives_title( '<h1 class="page-title">', '</h1>' ); ?></h1>
+				</header><!-- .page-header -->
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 
-		<?php else : ?>
+				<?php endwhile; ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<?php endif; ?>
 
-<?php get_sidebar(); ?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div><!-- .row -->
+</div><!-- .container -->
+
 <?php get_footer(); ?>

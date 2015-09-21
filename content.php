@@ -49,4 +49,5 @@
 			<?php endif; ?>
 		<?php endif; ?>
 	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-## -->
