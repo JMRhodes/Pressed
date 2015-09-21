@@ -90,7 +90,7 @@ if ( post_password_required() ) {
 	    ob_end_clean();
 
 	    // submit
-	    echo $string; //@codingStandardsIgnoreLine
+	    echo $string; 
 	?>
 
 </div><!-- #comments -->

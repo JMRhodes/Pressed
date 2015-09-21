@@ -60,7 +60,7 @@ if ( ! function_exists( 'presser_header_style' ) ) {
 		?>
 			.site-title a,
 			.site-description {
-				color: <?php echo '#' . get_header_textcolor() . '!important;'; //@codingStandardsIgnoreLine ?>
+				color: <?php echo '#' . get_header_textcolor() . '!important;';  ?>
 			}
 		<?php endif; ?>
 		</style>

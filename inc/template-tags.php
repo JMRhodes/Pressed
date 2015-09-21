@@ -35,7 +35,7 @@ if ( ! function_exists( 'presser_get_category_list' ) ) {
 if ( ! function_exists( 'presser_comment' ) ) {
 
 	function presser_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment; //@codingStandardsIgnoreLine;
+		$GLOBALS['comment'] = $comment; ;
 
 		if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
@@ -49,7 +49,7 @@ if ( ! function_exists( 'presser_comment' ) ) {
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
 			<?php if ( 0 != $args['avatar_size'] ) {
 				echo get_avatar( $comment, 64 );
-			}  //@codingStandardsIgnoreLine ?>
+			}   ?>
 
 			<section id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
@@ -165,7 +165,7 @@ if ( ! function_exists( 'presser_archives_title' ) ) :
 		$title = apply_filters( 'get_presser_archives_title', $title );
 
 		if ( ! empty( $title ) ) {
-			echo $before . $title . $after; //@codingStandardsIgnoreLine
+			echo $before . $title . $after; 
 		}
 	}
 endif;

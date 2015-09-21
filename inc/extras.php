@@ -20,13 +20,13 @@ function presser_paginate( $container = false ) {
 	<div class="clearfix"></div>
 
 	<div class="pagination">
-		<?php echo( $container ? '<div class="pagination-inner">' : '' ); //@codingStandardsIgnoreLine ?>
+		<?php echo( $container ? '<div class="pagination-inner">' : '' );  ?>
 		<?php previous_posts_link( '<div class="dashicons dashicons-arrow-left-alt2"></div>' ); ?>
 		<?php global $wp_query; ?>
 
 		<div class="pagenums">
 			<?php
-			$paged   = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; //@codingStandardsIgnoreLine
+			$paged   = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
 			$current = sprintf( '%02s', $paged );
 			$last    = sprintf( '%02s', $wp_query->max_num_pages );
 			?>
@@ -36,7 +36,7 @@ function presser_paginate( $container = false ) {
 		</div>
 
 		<?php next_posts_link( '<div class="dashicons dashicons-arrow-right-alt2"></div>' ); ?>
-		<?php echo( $container ? '</div>' : '' ); //@codingStandardsIgnoreLine ?>
+		<?php echo( $container ? '</div>' : '' );  ?>
 	</div>
 	<?php
 	$paginate = ob_get_contents();
@@ -88,7 +88,7 @@ function wpe_excerpt( $length_callback = '', $more_callback = '' ) {
 	$output = apply_filters( 'wptexturize', $output );
 	$output = apply_filters( 'convert_chars', $output );
 	$output = '<p class="excerpt">' . $output . '</p>';
-	echo $output; //@codingStandardsIgnoreLine
+	echo $output; 
 }
 
 /**
