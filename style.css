@@ -219,48 +219,48 @@ table {
 }
 
 .pad-xs-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .pad-xs-15 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .pad-xs-30 {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .pad-xs-45 {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .pad-xs-60 {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pad-xs-75 {
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .pad-xs-90 {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .pad-xs-105 {
-  padding-left: 105px;
-  padding-right: 105px;
+  padding-top: 105px;
+  padding-bottom: 105px;
 }
 
 .pad-xs-120 {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* Small grid
@@ -465,48 +465,48 @@ table {
   }
 
   .pad-sm-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .pad-sm-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .pad-sm-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .pad-sm-45 {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .pad-sm-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .pad-sm-75 {
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .pad-sm-90 {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   .pad-sm-105 {
-    padding-left: 105px;
-    padding-right: 105px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 
   .pad-sm-120 {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 /* Medium grid
@@ -723,48 +723,48 @@ table {
   }
 
   .pad-md-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .pad-md-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .pad-md-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .pad-md-45 {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .pad-md-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .pad-md-75 {
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .pad-md-90 {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   .pad-md-105 {
-    padding-left: 105px;
-    padding-right: 105px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 
   .pad-md-120 {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 /* Large grid
@@ -981,48 +981,48 @@ table {
   }
 
   .pad-lg-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .pad-lg-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .pad-lg-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .pad-lg-45 {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .pad-lg-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .pad-lg-75 {
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .pad-lg-90 {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   .pad-lg-105 {
-    padding-left: 105px;
-    padding-right: 105px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 
   .pad-lg-120 {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 /* Basic Setup

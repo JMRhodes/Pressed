@@ -142,8 +142,8 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
 @for $i from 0 through 8 {
     $class-num: $i * 15;
     .pad-xs-#{$class-num} {
-        padding-left: $class-num + px;
-        padding-right: $class-num + px;
+        padding-top: $class-num + px;
+        padding-bottom: $class-num + px;
     }
 }
   
@@ -222,8 +222,8 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     @for $i from 0 through 8 {
         $class-num: $i * 15;
         .pad-sm-#{$class-num} {
-            padding-left: $class-num + px;
-            padding-right: $class-num + px;
+            padding-top: $class-num + px;
+            padding-bottom: $class-num + px;
         }
     }
 }
@@ -303,8 +303,8 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     @for $i from 0 through 8 {
         $class-num: $i * 15;
         .pad-md-#{$class-num} {
-            padding-left: $class-num + px;
-            padding-right: $class-num + px;
+            padding-top: $class-num + px;
+            padding-bottom: $class-num + px;
         }
     }
 }
@@ -385,8 +385,8 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     @for $i from 0 through 8 {
         $class-num: $i * 15;
         .pad-lg-#{$class-num} {
-            padding-left: $class-num + px;
-            padding-right: $class-num + px;
+            padding-top: $class-num + px;
+            padding-bottom: $class-num + px;
         }
     }
 }
