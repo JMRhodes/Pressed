@@ -6,6 +6,14 @@
     @include clearfix();
 }
 
+.no-pad-top {
+    padding-top: 0;
+}
+
+.no-pad-bottom {
+    padding-bottom: 0;
+}
+
 .no-gutter-left {
     padding-left: 0;
 }

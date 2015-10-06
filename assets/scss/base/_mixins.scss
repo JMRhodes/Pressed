@@ -23,6 +23,30 @@
 /* Responsive utilities
 ----------------------------------------------- */
 
+@mixin mobile {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
 @mixin responsive-visibility() {
   display: block !important;
   tr & { display: table-row !important; }
@@ -77,6 +101,16 @@
   -webkit-transform: translate($x, $y);
       -ms-transform: translate($x, $y); // IE9+
           transform: translate($x, $y);
+}
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+      -ms-transform: translateY($y); // IE9+
+          transform: translateY($y);
+}
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+      -ms-transform: translateX($x); // IE9+
+          transform: translateX($x);
 }
 @mixin skew($x, $y) {
   -webkit-transform: skew($x, $y);

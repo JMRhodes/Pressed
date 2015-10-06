@@ -35,24 +35,9 @@ function presser_setup() {
 	// Add automatic feed links in header
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	));
-
 	// Add Post Thumbnail Image sizes and support
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'featured-xl', 1400, 9999 );
 
 	// Register custom menus
 	register_nav_menus( array(
@@ -72,8 +57,6 @@ add_action( 'after_setup_theme', 'presser_setup' );
 /**
  * Load additional files and functions.
  */
-require get_template_directory() . '/inc/custom-background.php';
-require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';

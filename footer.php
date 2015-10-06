@@ -11,7 +11,7 @@
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'presser' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'presser' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'presser' ), 'presser', '<a href="http://westwerk.com/" rel="designer">Westwerk</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'presser' ), 'Presser', '<a href="http://domain.com/" rel="designer">Domain</a>' ); ?>
 			</div><!-- .site-info -->
 		</div>
 	</footer><!-- #colophon -->

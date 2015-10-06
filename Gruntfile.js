@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             },
             build: {
                 options: {
-                    style: 'expanded',
+                    style: 'compressed',
                     compass: false,
                 },
                 files: {
@@ -77,6 +77,9 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                spawn: false,
+            },
             sass: {
                 files: [
                     'assets/scss/*.scss',

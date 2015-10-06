@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php presser_archives_title(); ?></h1>
+					<?php presser_archives_title( '<h1 class="page-title">', '</h1>' ); ?>
 				</header><!-- .page-header -->
 
 				<div class="entry-content">
