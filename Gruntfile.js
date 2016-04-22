@@ -5,8 +5,13 @@ module.exports = function(grunt) {
     // Show elapsed time
     require('time-grunt')(grunt);
 
-    var jsFileList = [
-        'assets/js/plugins/*.js',
+    var jsVendorList = [
+        'assets/js/vendor/*.js',
+    ];
+
+    var jsModuleList = [
+        'assets/js/module/*.js',
+        'assets/js/app.js',
     ];
 
     grunt.initConfig({
@@ -49,14 +54,17 @@ module.exports = function(grunt) {
                 separator: ';',
             },
             dist: {
-                src: [jsFileList],
-                dest: 'assets/js/plugins.min.js',
+                files: {
+                    'assets/js/dist/vendor.min.js': [jsVendorList],
+                    'assets/js/dist/app.min.js': [jsModuleList],
+                }
             },
         },
         uglify: {
             dist: {
                 files: {
-                    'assets/js/plugins.min.js': [jsFileList]
+                    'assets/js/dist/vendor.min.js': [jsVendorList],
+                    'assets/js/dist/app.min.js': [jsModuleList]
                 }
             }
         },
@@ -89,24 +97,12 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [
-                    jsFileList,
+                    jsVendorList,
+                    jsModuleList,
                     '<%= jshint.all %>'
                 ],
                 tasks: ['jshint', 'concat']
             },
-            livereload: {
-                // Browser live reloading
-                // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
-                options: {
-                    livereload: false
-                },
-                files: [
-                    'style.css',
-                    'assets/js/theme.js',
-                    'templates/*.php',
-                    '*.php'
-                ]
-            }
         }
     });
 

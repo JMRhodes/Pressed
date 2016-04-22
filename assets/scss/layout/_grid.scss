@@ -1,49 +1,7 @@
 
-// Media queries breakpoints
-// --------------------------------------------------
-
-$screen-xs:                 480px;
-$screen-phone:              $screen-xs;
-
-$screen-sm:                 768px;
-$screen-tablet:             $screen-sm;
-
-$screen-md:                 992px;
-$screen-desktop:            $screen-md;
-
-$screen-lg:                 1200px;
-$screen-lg-desktop:         $screen-lg;
-
-$screen-xs-max:             ($screen-sm - 1);
-$screen-sm-max:             ($screen-md - 1);
-$screen-md-max:             ($screen-lg - 1);
-
 
 /* Grid System
 ----------------------------------------------- */
-
-$grid-columns:              12;
-$grid-gutter-width:         30px;
-$grid-float-breakpoint:     $screen-tablet;
-$container-tablet:          ((720px + $grid-gutter-width));
-$container-desktop:         ((940px + $grid-gutter-width));
-$container-lg-desktop:      ((1170px + $grid-gutter-width));
-
-// Centered container element
-@mixin container-fixed() {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left:  ($grid-gutter-width / 2);
-    padding-right: ($grid-gutter-width / 2);
-    @include clearfix();
-}
-
-// Creates a wrapper for a series of columns
-@mixin make-row($gutter: $grid-gutter-width) {
-    margin-left:  ($gutter / -2);
-    margin-right: ($gutter / -2);
-    @include clearfix();
-}
 
 // Set the container width, and override it for fixed navbars in media queries
 .container {
@@ -139,7 +97,7 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
 .col-xs-12 { width: 100%; }
 
 // pad-xs classes
-@for $i from 0 through 8 {
+@for $i from 0 through 20 {
     $class-num: $i * 15;
     .pad-xs-#{$class-num} {
         padding-top: $class-num + px;
@@ -219,7 +177,7 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     .col-sm-offset-11 { margin-left: percentage((11/ $grid-columns)); }
 
     // pad-sm classes
-    @for $i from 0 through 8 {
+    @for $i from 0 through 20 {
         $class-num: $i * 15;
         .pad-sm-#{$class-num} {
             padding-top: $class-num + px;
@@ -300,7 +258,7 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     .col-md-offset-11 { margin-left: percentage((11/ $grid-columns)); }
 
     // pad-md classes
-    @for $i from 0 through 8 {
+    @for $i from 0 through 20 {
         $class-num: $i * 15;
         .pad-md-#{$class-num} {
             padding-top: $class-num + px;
@@ -382,7 +340,7 @@ $container-lg-desktop:      ((1170px + $grid-gutter-width));
     .col-lg-offset-11 { margin-left: percentage((11/ $grid-columns)); }
 
     // pad-lg classes
-    @for $i from 0 through 8 {
+    @for $i from 0 through 20 {
         $class-num: $i * 15;
         .pad-lg-#{$class-num} {
             padding-top: $class-num + px;

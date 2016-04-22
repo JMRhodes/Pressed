@@ -1,9 +1,9 @@
-/**
+/*!
 Theme Name: Presser
 Theme URI: http://www.rhodescodes.com
 Author: Justin Rhodes
 Author URI: http://www.rhodescodes.com/
-Description: A starter framework for Press75 themes.
+Description: A starter framework for WordPress themes.
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,21 +11,15 @@ Text Domain: presser
 Tags:
 */
 
-@import "variables";
-
-@import "base/mixins";
 @import "base/reset";
-@import "base/grid";
-@import "base/helpers";
+@import "base/typography";
 
-@import "theme/base";
-@import "theme/header";
-@import "theme/primary";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/helpers";
 
-@include mobile {}
+@import "layout/grid";
 
-@include tablet {}
+@import "themes/theme";
 
-@include desktop {}
-
-@include desktop-lg {}
+@import "components/buttons";

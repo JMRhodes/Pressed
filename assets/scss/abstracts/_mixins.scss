@@ -20,6 +20,26 @@
 }
 
 
+/* Grid System
+----------------------------------------------- */
+
+// Centered container element
+@mixin container-fixed() {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @include clearfix();
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width) {
+    margin-left:  ($gutter / -2);
+    margin-right: ($gutter / -2);
+    @include clearfix();
+}
+
+
 /* Responsive utilities
 ----------------------------------------------- */
 
@@ -61,11 +81,18 @@
   td & { display: none !important; }
 }
 
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
 @mixin opacity($opacity) {
   opacity: $opacity;
   // IE8 filter
   $opacity-ie: ($opacity * 100);
-//  filter: ~"alpha(opacity=@{opacity-ie})";
+  //  filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
 @mixin transition($transition) {
