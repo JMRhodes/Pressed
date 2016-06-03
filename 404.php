@@ -7,33 +7,38 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-sm-8 content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container">
+	<div class="row">
+	
+		<div class="col-sm-8 content content--404" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<?php presser_archives_title( '<h1 class="page-title">', '</h1>' ); ?>
-				</header><!-- .page-header -->
+			<header class="entry__header">
+				<h1 class="hdg hdg--1">
+					<?php _e( 'Page Not Found', 'presser' ); ?>
+				</h1>
+			</header><!-- .entry__header -->
 
-				<div class="entry-content">
+			<div class="entry__content">
 
-					<p><?php _e( 'It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:', 'presser' ); ?></p>
-					
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main_menu',
-							'container_class' => 'entry-content-menu',
-							'depth' => 1,
-						)
-					);
-					?>
+				<?php 
+				_e( '<p>It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:</p>', 'presser' );
+				
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main_menu',
+						'container_class' => 'entry-content-menu',
+						'depth' => 1,
+					)
+				);
+				?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</div><!-- .page-content -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div><!-- .content -->
 
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
+
+	</div><!-- .row -->
+</div><!-- .container -->
+
 <?php get_footer(); ?>

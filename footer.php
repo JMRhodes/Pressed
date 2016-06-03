@@ -6,17 +6,13 @@
  */
 ?>	
 	
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer class="footer" role="contentinfo">
 		<div class="container">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'presser' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'presser' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
+			<div class="footer__info">
 				<?php printf( __( 'Theme: %1$s by %2$s.', 'presser' ), 'Presser', '<a href="http://domain.com/" rel="designer">Domain</a>' ); ?>
 			</div><!-- .site-info -->
 		</div>
-	</footer><!-- #colophon -->
-	
-</div><!-- #page -->
+	</footer><!-- .footer -->
 
 <?php wp_footer(); ?>
 

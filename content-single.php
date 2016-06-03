@@ -5,21 +5,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'presser' ),
-				'after'  => '</div>',
-			) );
+	<header class="entry__header">
+		<?php the_title( '<h1 class="hdg hdg--1">', '</h1>' ); ?>
+	</header><!-- .entry__header -->
+
+	<div class="entry__content">
+		<?php 
+		the_content();
+
+		wp_link_pages([
+			'before' => '<div class="page-links">' . __( 'Pages:', 'presser' ),
+			'after'  => '</div>',
+		]);
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry__content -->
 
-	<footer class="entry-footer">
+	<footer class="entry__footer">
 		<?php
 		// translators: used between list items, there is a space after the comma
 		$category_list = get_the_category_list( __( ', ', 'presser' ) );
@@ -40,8 +42,9 @@
 			$tag_list,
 			get_permalink()
 		);
+		
+		edit_post_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); 
 		?>
+	</footer><!-- .entry__footer -->
 
-		<?php edit_post_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

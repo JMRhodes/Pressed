@@ -19,16 +19,15 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page">
 
-	<header id="masthead" class="site-header col-sm-12" role="banner">
+	<header class="header" role="banner">
 		<div class="container">
-			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<div class="branding">
+				<h1 class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="branding__description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav class="navigation" role="navigation">
 				<?php
 				wp_nav_menu(
 					array(
@@ -36,6 +35,6 @@
 					)
 				);
 				?>
-			</nav><!-- #site-navigation -->
+			</nav><!-- .navigation -->
 		</div>
-	</header><!-- #masthead -->
+	</header><!-- .header -->

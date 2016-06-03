@@ -15,33 +15,22 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-		<div id="primary" class="col-sm-8 content-area">
-			<main id="main" class="site-main" role="main">
+	
+		<div class="col-sm-8 content" role="main">
 
-			<?php if ( have_posts() ) : ?>
-			
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post();
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+					get_template_part( 'content', get_post_format() ); 
+				}
+			} else {
+				get_template_part( 'content', 'none' );
+			}
+			?>
 
-				<?php endwhile; ?>
-
-				<?php presser_paginate(); ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'content', 'none' ); ?>
-
-			<?php endif; ?>
-
-			</main><!-- #main -->
-		</div><!-- #primary -->
+		</div><!-- .content -->
 
 		<?php get_sidebar(); ?>
 

@@ -7,25 +7,31 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'presser' ); ?></h1>
-	</header><!-- .page-header -->
 
-	<div class="page-content">
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+	<header class="page__header">
+		<h1 class="hdg hdg--1">
+			<?php _e( 'Nothing Found', 'presser' ); ?>
+		</h1>
+	</header><!-- .entry__header -->
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'presser' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+	<div class="page__content">
+		<?php 
+		if ( is_home() && current_user_can( 'publish_posts' ) ) {
+			
+			printf( __( '<p>Ready to publish your first post? <a href="%1$s">Get started here</a>.</p>', 'presser' ), esc_url( admin_url( 'post-new.php' ) ) );
+		
+		} elseif ( is_search() ) {
 
-		<?php elseif ( is_search() ) : ?>
+			_e( '<p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>', 'presser' );
+			get_search_form();
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'presser' ); ?></p>
-			<?php get_search_form(); ?>
+		} else {
 
-		<?php else : ?>
+			_e( '<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>', 'presser' );
+			get_search_form();
+			
+		}
+		?>
+	</div><!-- .page__content -->
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'presser' ); ?></p>
-			<?php get_search_form(); ?>
-
-		<?php endif; ?>
-	</div><!-- .page-content -->
 </section><!-- .no-results -->
