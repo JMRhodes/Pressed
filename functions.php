@@ -86,8 +86,8 @@ add_action( 'wp_enqueue_scripts', 'presser_theme_styles' );
  * Required Theme Scripts
  */
 function presser_theme_scripts() {
-    wp_enqueue_script( 'plugins', get_template_directory_uri() . '/assets/js/plugins.min.js', null, presser_version_id(), true );
-    wp_enqueue_script( 'presser', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery' ), presser_version_id(), true );
+    wp_enqueue_script( 'presser-vendor', get_template_directory_uri() . '/assets/js/dist/vendor.min.js', array( 'jquery' ), presser_version_id(), true );
+    wp_enqueue_script( 'presser', get_template_directory_uri() . '/assets/js/dist/theme.min.js', [], presser_version_id(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -117,7 +117,7 @@ add_action( 'pre_get_posts', 'presser_main_query_pre_get_posts' );
 function presser_register_widget_areas() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'presser' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar',
 		'description'   => __( 'Main sidebar area displayed on right side of page via trigger.', 'presser' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
