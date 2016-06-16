@@ -11,12 +11,27 @@ define( 'THEME_VERSION', '0.9' );
 /** Autoloader */
 require_once 'vendor/autoload.php';
 
+
+/** Defines custom Hybrid Core directory. */
+define( 'HYBRID_DIR', __DIR__ . '/bower_components/hybrid-core/' );
+define( 'HYBRID_URI', get_template_directory_uri() . '/bower_components/hybrid-core/' );
+
+/** Load the Hybrid Core framework. */
+require_once HYBRID_DIR . 'hybrid.php';
+new Hybrid();
+
 /**
  * Theme Setup
  */
 add_action( 'after_setup_theme', function() {
 
 	( new \Pressed\Classes\Setup() )->addHooks();
+
+	// Theme layouts.
+	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
+
+	// Enable custom template hierarchy.
+	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	// Translation setup
 	load_theme_textdomain( 'pressed', get_template_directory() . '/languages' );

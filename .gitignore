@@ -1,8 +1,18 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-node_modules
-vendor
+# Ignored theme files
 assets/js/dist
 style.css.map
-.sass-cache
+*.sass-cache*
+*.log
+bower_components
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Mac
+*.DS_Store
+thumbs.db
 .idea
