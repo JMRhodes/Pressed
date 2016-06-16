@@ -39,6 +39,9 @@ add_action( 'after_setup_theme', function() {
 	// Add automatic feed links in header
 	add_theme_support( 'automatic-feed-links' );
 
+    // Breadcrumbs. Yay!
+    add_theme_support( 'breadcrumb-trail' );
+
 	// Add Post Thumbnail Image sizes and support
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'featured-xl', 1400, 9999 );

@@ -1,27 +1,44 @@
 # Pressed
+**Pressed, the WordPress starter theme.**
 
-A WordPress starter framework, based off Underscores and Bootstrap grid.
+Pressed requires a minimum of WordPress 4.5.
 
-## Installation
+## What tools do I need to use Pressed?
+Pressed is built with **Bower** and **Gulp** usage in mind and is the recommended way to use this theme.
+However theme assets should compile just fine using other tools.
 
-TODO: Describe the installation process
+## Getting Started With Pressed
 
-## Usage
+### Install node.js.
+- Using the command line, navigate to your theme directory
+- Run `npm install` to install Gulp plugins and Bower packages and Composer autoload.
+- Run `gulp` to confirm everything is working
 
-TODO: Write usage instructions
+### What Gulp tasks are included?
+Pressed comes with a few useful Gulp tasks out of the box:
 
-## Contributing
+#### gulp
+The default Gulp task. Runs the `build` task and watches files for changes.
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+#### gulp Sass
+Compiles and minifies the `style.scss` stylesheet.
 
-## Credits
+#### gulp javascript
+Concats and minifies the main JS file.
 
-TODO: Write credits
+#### gulp build
+Runs the clean, copy:hc, sass and javascript tasks.
 
-## License
+#### gulp renametheme
+This will rename all references to the theme text domain, function names and any other theme specific names.
+*To use this task please make sure you change the `THEME` variable in `gulpfile.js` before running this task.*
 
-TODO: Write license
+## Copyright and License
+The following resources are included or used in part within the theme package.
+
+* [Hybrid Core](http://themehybrid.com/) by Justin Tadlock - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+* [Underscores](http://underscores.me/) by Automattic, Inc. - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+
+2016 &copy; [Justin Rhodes](http://rhodescodes.com).

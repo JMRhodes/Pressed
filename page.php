@@ -10,12 +10,16 @@
  * @package Pressed
  */
 
-get_header(); ?>
+get_header(); 
+
+?>
 
 <div class="container">
 	<div class="row">
 	
 		<div class="col-sm-8 content">
+
+			<?php hybrid_get_menu( 'breadcrumb' ); // Loads the menu/breadcrumb.php template. ?>
 
 			<?php 
 			while ( have_posts() ) {
