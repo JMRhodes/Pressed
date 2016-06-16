@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', function() {
 	( new \Pressed\Classes\Setup() )->addHooks();
 
 	// Theme layouts.
-	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
+	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? 'sidebar-left' : 'sidebar' ) );
 
 	// Enable custom template hierarchy.
 	add_theme_support( 'hybrid-core-template-hierarchy' );

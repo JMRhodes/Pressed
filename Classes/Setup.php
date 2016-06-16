@@ -32,15 +32,15 @@ class Setup {
      * Registers layouts.
      */
     public function registerLayouts() {
-        hybrid_register_layout( '1c', array(
+        hybrid_register_layout( 'full', array(
             'label' => _x( '1 Column', 'pressed' ),
             'image' => '%s/assets/images/layouts/1c.svg',
         ) );
-        hybrid_register_layout( '2c-l', array(
+        hybrid_register_layout( 'sidebar', array(
             'label' => _x( 'Content / Sidebar', 'pressed' ),
             'image' => '%s/assets/images/layouts/2c-l.svg',
         ) );
-        hybrid_register_layout( '2c-r', array(
+        hybrid_register_layout( 'sidebar-left', array(
             'label' => _x( 'Sidebar / Content', 'pressed' ),
             'image' => '%s/assets/images/layouts/2c-r.svg',
         ) );

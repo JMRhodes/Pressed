@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 	
-		<div class="col-sm-8 content" role="main">
+		<div class="col-sm-8 content">
 
 			<?php 
 			while ( have_posts() ) {
