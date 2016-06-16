@@ -26,6 +26,7 @@ new Hybrid();
 add_action( 'after_setup_theme', function() {
 
 	( new \Pressed\Classes\Setup() )->addHooks();
+	( new \Pressed\Classes\HybridMods() )->addHooks();
 
 	// Theme layouts.
 	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? 'sidebar-left' : 'sidebar' ) );

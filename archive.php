@@ -23,10 +23,12 @@ get_header(); ?>
 				while ( have_posts() ) {
 					the_post();
 
-					get_template_part( 'content', get_post_format() ); 
+					// Loads the content/archive/content.php template.
+					hybrid_get_content_template();
 				}
 			} else {
-				get_template_part( 'content', 'none' );
+				// Loads the content/content-none.php template.
+				get_template_part( 'content/content', 'none' );
 			}
 			?>
 			
