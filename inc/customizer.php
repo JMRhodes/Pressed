@@ -2,7 +2,7 @@
 /**
  * Presser Theme Customizer
  *
- * @package Presser
+ * @package Pressed
  */
 
 /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Presser
+ * @package Pressed
  */
 ?>
 
@@ -15,7 +15,7 @@
 		the_content();
 
 		wp_link_pages([
-			'before' => '<div class="page-links">' . __( 'Pages:', 'presser' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'pressed' ),
 			'after'  => '</div>',
 		]);
 		?>
@@ -24,16 +24,16 @@
 	<footer class="entry__footer">
 		<?php
 		// translators: used between list items, there is a space after the comma
-		$category_list = get_the_category_list( __( ', ', 'presser' ) );
+		$category_list = get_the_category_list( __( ', ', 'pressed' ) );
 
 		// translators: used between list items, there is a space after the comma
-		$tag_list = get_the_tag_list( '', __( ', ', 'presser' ) );
+		$tag_list = get_the_tag_list( '', __( ', ', 'pressed' ) );
 
 		// But this blog has loads of categories so we should probably display them here
 		if ( '' != $tag_list ) {
-			$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'presser' );
+			$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'pressed' );
 		} else {
-			$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'presser' );
+			$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'pressed' );
 		}
 
 		printf(
@@ -43,7 +43,7 @@
 			get_permalink()
 		);
 		
-		edit_post_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); 
+		edit_post_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' ); 
 		?>
 	</footer><!-- .entry__footer -->
 

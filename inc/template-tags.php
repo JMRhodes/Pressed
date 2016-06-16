@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Presser
+ * @package Pressed
  */
 
 /**
@@ -129,7 +129,7 @@ if ( ! function_exists( 'presser_get_category_list' ) ) {
 	function presser_get_category_list( $args = array() ) {
 		$list       = array();
 		$categories = get_categories( $args );
-		$list['']   = __( 'All categories', 'presser' );
+		$list['']   = __( 'All categories', 'pressed' );
 
 		foreach ( (array) $categories as $category ) {
 			$list[ $category->cat_ID ] = $category->cat_name;
@@ -156,7 +156,7 @@ if ( ! function_exists( 'presser_comment' ) ) {
 
 			<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<div class="comment-body">
-				<?php _e( 'Pingback:', 'presser' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php _e( 'Pingback:', 'pressed' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 		<?php else : ?>
@@ -169,17 +169,17 @@ if ( ! function_exists( 'presser_comment' ) ) {
 			<section id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
-						<?php printf( __( '%s', 'presser' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+						<?php printf( __( '%s', 'pressed' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					</div>
 					<!-- .comment-author -->
 
 					<div class="comment-metadata">
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 							<time datetime="<?php comment_time( 'c' ); ?>">
-								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'presser' ), get_comment_date(), get_comment_time() ); ?>
+								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'pressed' ), get_comment_date(), get_comment_time() ); ?>
 							</time>
 						</a>
-						<?php edit_comment_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_comment_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' ); ?>
 
 						<?php
 						comment_reply_link( array_merge( $args, array(
@@ -194,7 +194,7 @@ if ( ! function_exists( 'presser_comment' ) ) {
 					<!-- .comment-metadata -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'presser' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pressed' ); ?></p>
 					<?php endif; ?>
 				</footer>
 				<!-- .comment-meta -->

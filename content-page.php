@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Presser
+ * @package Pressed
  */
 ?>
 
@@ -17,14 +17,14 @@
 		the_content();
 
 		wp_link_pages([
-			'before' => '<div class="page-links">' . __( 'Pages:', 'presser' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'pressed' ),
 			'after'  => '</div>',
 		]);
 		?>
 	</div><!-- .entry__content -->
 
 	<footer class="entry__footer">
-		<?php edit_post_link( __( 'Edit', 'presser' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry__footer -->
 
 </article><!-- #post-## -->

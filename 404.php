@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package Presser
+ * @package Pressed
  */
 
 get_header(); ?>
@@ -14,14 +14,14 @@ get_header(); ?>
 
 			<header class="entry__header">
 				<h1 class="hdg hdg--1">
-					<?php _e( 'Page Not Found', 'presser' ); ?>
+					<?php _e( 'Page Not Found', 'pressed' ); ?>
 				</h1>
 			</header><!-- .entry__header -->
 
 			<div class="entry__content">
 
 				<?php 
-				_e( '<p>It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:</p>', 'presser' );
+				_e( '<p>It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:</p>', 'pressed' );
 				
 				wp_nav_menu(
 					array(

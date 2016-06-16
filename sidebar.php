@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget areas.
  *
- * @package Presser
+ * @package Pressed
  */
 
 if ( ! is_active_sidebar( 'sidebar' ) ) {

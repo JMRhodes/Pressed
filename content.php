@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Presser
+ * @package Pressed
  */
 ?>
 
@@ -21,7 +21,7 @@
 		the_content();
 
 		wp_link_pages([
-			'before' => '<div class="page-links">' . __( 'Pages:', 'presser' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'pressed' ),
 			'after'  => '</div>',
 		]);
 		?>
@@ -33,17 +33,17 @@
 		if ( 'post' == get_post_type() ) {
 
 			// translators: used between list items, there is a space after the comma
-			$categories_list = get_the_category_list( __( ', ', 'presser' ) );
+			$categories_list = get_the_category_list( __( ', ', 'pressed' ) );
 
 			if ( $categories_list ) {
-				printf( __( '<span>Posted in %1$s</span>', 'presser' ), $categories_list );
+				printf( __( '<span>Posted in %1$s</span>', 'pressed' ), $categories_list );
 			}
 
 			// translators: used between list items, there is a space after the comma
-			$tags_list = get_the_tag_list( '', __( ', ', 'presser' ) );
+			$tags_list = get_the_tag_list( '', __( ', ', 'pressed' ) );
 
 			if ( $tags_list ) {
-				printf( __( '<span>Tagged %1$s</span>', 'presser' ), $tags_list );
+				printf( __( '<span>Tagged %1$s</span>', 'pressed' ), $tags_list );
 			}
 
 		}

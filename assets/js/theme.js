@@ -1,7 +1,7 @@
 /**
  * Custom JS Scripts
  *
- * @package Presser
+ * @package Pressed
  */
 
 ( function() {

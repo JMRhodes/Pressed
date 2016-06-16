@@ -5,6 +5,7 @@
  * @package Pressed
  */
 
+/** Define Theme Version */
 define( 'THEME_VERSION', '0.9' );
 
 /** Autoloader */
@@ -18,7 +19,7 @@ add_action( 'after_setup_theme', function() {
 	( new \Pressed\Classes\Setup() )->addHooks();
 
 	// Translation setup
-	load_theme_textdomain( 'presser', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'pressed', get_template_directory() . '/languages' );
 
 	// Add automatic feed links in header
 	add_theme_support( 'automatic-feed-links' );
@@ -33,13 +34,7 @@ add_action( 'after_setup_theme', function() {
 	 */
 	add_theme_support( 
 		'html5', 
-		array(
-			'search-form', 
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		)
+		array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' )
 	);
 
 });

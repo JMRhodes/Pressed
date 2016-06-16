@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package Presser
+ * @package Pressed
  */
 
 /**

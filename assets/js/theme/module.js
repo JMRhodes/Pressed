@@ -1,7 +1,7 @@
 /**
  * moduleJS
  *
- * @package Presser
+ * @package Pressed
  */
  
 var moduleJS = (function () {

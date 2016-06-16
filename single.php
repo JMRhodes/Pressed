@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Presser
+ * @package Pressed
  */
 
 get_header(); ?>

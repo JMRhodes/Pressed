@@ -2,7 +2,7 @@
 /**
  * The template part for displaying a message that posts cannot be found.
  *
- * @package Presser
+ * @package Pressed
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 	<header class="page__header">
 		<h1 class="hdg hdg--1">
-			<?php _e( 'Nothing Found', 'presser' ); ?>
+			<?php _e( 'Nothing Found', 'pressed' ); ?>
 		</h1>
 	</header><!-- .entry__header -->
 
@@ -18,16 +18,16 @@
 		<?php 
 		if ( is_home() && current_user_can( 'publish_posts' ) ) {
 			
-			printf( __( '<p>Ready to publish your first post? <a href="%1$s">Get started here</a>.</p>', 'presser' ), esc_url( admin_url( 'post-new.php' ) ) );
+			printf( __( '<p>Ready to publish your first post? <a href="%1$s">Get started here</a>.</p>', 'pressed' ), esc_url( admin_url( 'post-new.php' ) ) );
 		
 		} elseif ( is_search() ) {
 
-			_e( '<p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>', 'presser' );
+			_e( '<p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>', 'pressed' );
 			get_search_form();
 
 		} else {
 
-			_e( '<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>', 'presser' );
+			_e( '<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>', 'pressed' );
 			get_search_form();
 			
 		}
