@@ -125,8 +125,8 @@ class Pressed_Walker extends Walker_Nav_Menu {
  *
  * @return Array Category ID, Name, and Count
  */
-if ( ! function_exists( 'presser_get_category_list' ) ) {
-	function presser_get_category_list( $args = array() ) {
+if ( ! function_exists( 'pressed_get_category_list' ) ) {
+	function pressed_get_category_list( $args = array() ) {
 		$list       = array();
 		$categories = get_categories( $args );
 		$list['']   = __( 'All categories', 'pressed' );
@@ -147,9 +147,9 @@ if ( ! function_exists( 'presser_get_category_list' ) ) {
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-if ( ! function_exists( 'presser_comment' ) ) {
+if ( ! function_exists( 'pressed_comment' ) ) {
 
-	function presser_comment( $comment, $args, $depth ) {
+	function pressed_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment; ;
 
 		if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
@@ -209,7 +209,7 @@ if ( ! function_exists( 'presser_comment' ) ) {
 			<?php
 		endif;
 	}
-} // ends check for presser_comment()
+} // ends check for pressed_comment()
 
 /**
  * The below functionality is used because the query is set
@@ -220,8 +220,8 @@ if ( ! function_exists( 'presser_comment' ) ) {
  * the pagination properly.
  *
  */
-if ( ! function_exists( 'presser_get_paged_query_var' ) ) {
-	function presser_get_paged_query_var() {
+if ( ! function_exists( 'pressed_get_paged_query_var' ) ) {
+	function pressed_get_paged_query_var() {
 		if ( get_query_var( 'paged' ) ) {
 			$paged = get_query_var( 'paged' );
 		} elseif ( get_query_var( 'page' ) ) {

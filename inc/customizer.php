@@ -38,21 +38,21 @@ function dropdown_sanitize_integer( $input ) {
  *
  * @return void
  */
-function presser_customize_register( $wp_customize ) {
+function pressed_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 
-add_action( 'customize_register', 'presser_customize_register' );
+add_action( 'customize_register', 'pressed_customize_register' );
 
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function presser_customize_preview_js() {
-	wp_enqueue_script( 'presser_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), presser_version_id(), true );
+function pressed_customize_preview_js() {
+	wp_enqueue_script( 'pressed_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), pressed_version_id(), true );
 }
 
-add_action( 'customize_preview_init', 'presser_customize_preview_js' );
+add_action( 'customize_preview_init', 'pressed_customize_preview_js' );
 

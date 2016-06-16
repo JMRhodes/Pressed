@@ -14,7 +14,7 @@
  *
  * @return bool|string
  */
-function presser_paginate( $container = false ) {
+function pressed_paginate( $container = false ) {
 	ob_start();
 	?>
 	<div class="clearfix"></div>
@@ -56,7 +56,7 @@ function presser_paginate( $container = false ) {
  *
  * @return int
  */
-function presser_new_excerpt_length( $length ) {
+function pressed_new_excerpt_length( $length ) {
 	return 35;
 }
 
@@ -67,7 +67,7 @@ function presser_new_excerpt_length( $length ) {
  *
  * @return string
  */
-function presser_new_excerpt_more( $more ) {
+function pressed_new_excerpt_more( $more ) {
 	return ' ...';
 }
 
