@@ -1,0 +1,19 @@
+{
+  "name": "pressed",
+  "description": "A WordPress starter theme.",
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pressed\\": ""
+    }
+  }
+}
