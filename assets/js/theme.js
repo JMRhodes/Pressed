@@ -4,8 +4,8 @@
  * @package Pressed
  */
 
-( function() {
-	
-    moduleJS._init();
+(function () {
+
+	fluidVids._init();
 
 })();

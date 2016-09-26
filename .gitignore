@@ -1,13 +1,15 @@
 # Ignored theme files
-assets/js/dist
-style.css.map
+/.idea/*
 *.sass-cache*
 *.log
-bower_components
 
 # Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
+
+# Ignore build directory
+/build/*
+/languages/*.pot
 
 # Node Package Manager
 node_modules
@@ -16,3 +18,4 @@ node_modules
 *.DS_Store
 thumbs.db
 .idea
+

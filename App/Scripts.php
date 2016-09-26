@@ -22,9 +22,17 @@ class Scripts {
 	 */
 	public function enqueueScripts() {
 		wp_enqueue_script(
-			'pressed',
-			get_template_directory_uri() . '/assets/js/dist/theme.min.js',
+			'pressed-vendors',
+			get_stylesheet_directory_uri() . '/build/js/vendor.min.js',
 			[ ],
+			THEME_VERSION,
+			true
+		);
+
+		wp_enqueue_script(
+			'pressed-theme',
+			get_stylesheet_directory_uri() . '/build/js/theme.min.js',
+			[ 'pressed-vendors' ],
 			THEME_VERSION,
 			true
 		);
@@ -40,7 +48,7 @@ class Scripts {
 	public function enqueueStyles() {
 		wp_enqueue_style(
 			'pressed',
-			get_stylesheet_uri(),
+			get_stylesheet_directory_uri() . '/build/css/style.min.css',
 			[ ],
 			THEME_VERSION
 		);
