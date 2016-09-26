@@ -1,8 +1,0 @@
-{
-  "name": "pressed",
-  "version": "0.9.0",
-  "private": true,
-  "devDependencies": {
-    "hybrid-core": "https://github.com/justintadlock/hybrid-core.git"
-  }
-}

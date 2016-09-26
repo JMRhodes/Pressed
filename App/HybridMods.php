@@ -1,12 +1,12 @@
 <?php
 
-namespace Pressed\Classes;
+namespace Pressed\App;
 
 /**
  * Class HybridMods
  * Hybrid Core compatibility and modifications.
  *
- * @package Pressed\Classes
+ * @package Pressed\App
  */
 class HybridMods {
 
@@ -14,7 +14,7 @@ class HybridMods {
      * Add class hooks.
      */
     public function addHooks() {
-        add_filter( 'hybrid_content_template_hierarchy', array( $this, 'contentTemplateHierarchy' ) );
+        add_filter( 'hybrid_content_template_hierarchy', [ $this, 'contentTemplateHierarchy' ] );
     }
 
     /**

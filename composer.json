@@ -11,6 +11,9 @@
       "url": "https://wpackagist.org"
     }
   ],
+  "require": {
+    "justintadlock/hybrid-core": "^3.0"
+  },
   "autoload": {
     "psr-4": {
       "Pressed\\": ""
