@@ -10,16 +10,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pressed
 Tags:
 */
-
 @import "base/reset";
 @import "base/typography";
-
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/helpers";
-
 @import "layout/grid";
-
 @import "themes/theme";
-
 @import "components/buttons";
