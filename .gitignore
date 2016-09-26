@@ -4,11 +4,11 @@
 *.log
 
 # Vendor (e.g. Composer)
-vendor/*
+vendor
 !vendor/.gitkeep
 
 # Ignore build directory
-/build/*
+build
 /languages/*.pot
 
 # Node Package Manager
