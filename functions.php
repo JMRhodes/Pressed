@@ -12,12 +12,12 @@ use Pressed\App\HybridMods;
 /** Define Theme Version */
 define( 'THEME_VERSION', '0.9' );
 
-/** Autoloader */
-require_once 'vendor/autoload.php';
-
 /** Defines custom Hybrid Core directory. */
 define( 'HYBRID_DIR', __DIR__ . '/vendor/justintadlock/hybrid-core/' );
 define( 'HYBRID_URI', get_template_directory_uri() . '/vendor/justintadlock/hybrid-core/' );
+
+/** Autoloader */
+require_once 'vendor/autoload.php';
 
 /** Load the Hybrid Core framework. */
 require_once HYBRID_DIR . 'hybrid.php';

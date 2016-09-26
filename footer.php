@@ -6,7 +6,7 @@
  */
 ?>
 
-<footer class="footer" role="contentinfo">
+<footer <?php hybrid_attr( 'footer' ); ?>>
 	<div class="container">
 		<div class="footer__copyright">
 			<?php printf(
@@ -14,15 +14,15 @@
 				__( 'Copyright &#169; %1$s %2$s', 'pressed' ),
 				date_i18n( 'Y' ), hybrid_get_site_link()
 			); ?>
-		</div><!-- .copyright -->
+		</div><!-- /.copyright -->
 		<div class="footer__credit">
 			<?php printf(
 			// Translators: theme name/link.
 				__( 'Powered by %1$s', 'pressed' ), hybrid_get_theme_link()
 			); ?>
-		</div><!-- .credit -->
+		</div><!-- /.credit -->
 	</div>
-</footer><!-- .footer -->
+</footer><!-- #footer -->
 
 <?php wp_footer(); ?>
 

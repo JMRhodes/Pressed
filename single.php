@@ -7,30 +7,30 @@
 
 get_header(); ?>
 
-<div class="container">
-	<div class="row">
+	<div class="container">
+		<div class="row">
 
-		<div class="col-sm-8 content" role="main">
+			<div <?php hybrid_attr( 'primary' ); ?>>
 
-			<?php 
-			while ( have_posts() ) {
-				the_post();
+				<?php
+				while ( have_posts() ) {
+					the_post();
 
-				// Loads the content/singular/content.php template.
-				hybrid_get_content_template();
+					// Loads the content/singular/content.php template.
+					hybrid_get_content_template();
 
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			}
-			?>
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() ) :
+						comments_template();
+					endif;
+				}
+				?>
 
-		</div><!-- .content -->
+			</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+			<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
 
-	</div><!-- .row -->
-</div><!-- .container -->
+		</div><!-- .row -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

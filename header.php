@@ -6,13 +6,10 @@
 
 <body <?php body_class(); ?>>
 
-	<header <?php hybrid_attr( 'header' ); ?>>
-		<div class="container">
-			<div class="branding">
-				<h1 class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="branding__description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
+<header <?php hybrid_attr( 'header' ); ?>>
+	<div class="container">
+		<?php get_template_part( 'components/site-branding' ); // Loads the components/site-branding.php template. ?>
 
-			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
-		</div>
-	</header><!-- .header -->
+		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
+	</div>
+</header><!-- .header -->
