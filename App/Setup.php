@@ -49,7 +49,7 @@ class Setup {
 	 */
 	public function registerSidebars() {
 		register_sidebar( [
-			'id'          => 'sidebar',
+			'id'          => 'primary',
 			'name'        => __( 'Sidebar', 'pressed' ),
 			'description' => __( 'Main sidebar area displayed on right side of page via trigger.', 'pressed' ),
 		] );

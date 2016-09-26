@@ -7,36 +7,33 @@
  * @package Pressed
  */
 
-get_header(); ?>
+get_header();
+?>
 
-<div class="container">
-	<div class="row">
-	
-		<div class="col-sm-8 content" role="main">
+	<div class="container">
+		<div class="row">
 
-			<header class="page-header">
-				<?php the_archive_title( '<h1 class="hdg hdg--1">', '</h1>' ); ?>
-			</header><!-- .page-header -->
+			<div <?php hybrid_attr( 'primary' ); ?>>
 
-			<?php 
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post();
+				<?php
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post();
 
-					// Loads the content/archive/content.php template.
-					hybrid_get_content_template();
+						// Loads the content/archive/content.php template.
+						hybrid_get_content_template();
+					}
+				} else {
+					// Loads the content/content-none.php template.
+					get_template_part( 'content/content', 'none' );
 				}
-			} else {
-				// Loads the content/content-none.php template.
-				get_template_part( 'content/content', 'none' );
-			}
-			?>
-			
-		</div><!-- .content -->
+				?>
 
-		<?php get_sidebar(); ?>
+			</div><!-- #primary -->
 
-	</div><!-- .row -->
-</div><!-- .container -->
+			<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
+
+		</div><!-- .row -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

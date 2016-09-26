@@ -1,40 +1,18 @@
-<?php
-/**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package Pressed
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	
+<head <?php hybrid_attr( 'head' ); ?>>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-
-	<header class="header" role="banner">
+	<header <?php hybrid_attr( 'header' ); ?>>
 		<div class="container">
 			<div class="branding">
 				<h1 class="branding__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="branding__description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 
-			<nav class="navigation" role="navigation">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main_menu',
-					)
-				);
-				?>
-			</nav><!-- .navigation -->
+			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 		</div>
 	</header><!-- .header -->

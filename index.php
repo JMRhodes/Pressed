@@ -15,8 +15,8 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-	
-		<div class="col-sm-8 content" role="main">
+
+		<div <?php hybrid_attr( 'primary' ); ?>>
 
 			<?php 
 			if ( have_posts() ) {
@@ -31,9 +31,9 @@ get_header(); ?>
 			}
 			?>
 
-		</div><!-- .content -->
+		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
+		<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
 
 	</div><!-- .row -->
 </div><!-- .container -->

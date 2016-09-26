@@ -10,36 +10,35 @@
  * @package Pressed
  */
 
-get_header(); 
-
+get_header();
 ?>
 
-<div class="container">
-	<div class="row">
-	
-		<div class="col-sm-8 content">
+	<div class="container">
+		<div class="row">
 
-			<?php hybrid_get_menu( 'breadcrumb' ); // Loads the menu/breadcrumb.php template. ?>
+			<div <?php hybrid_attr( 'primary' ); ?>>
 
-			<?php 
-			while ( have_posts() ) {
-				the_post();
+				<?php hybrid_get_menu( 'breadcrumb' ); // Loads the menu/breadcrumb.php template. ?>
 
-				// Loads the content/singular/page.php template.
-				hybrid_get_content_template();
+				<?php
+				while ( have_posts() ) {
+					the_post();
 
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			}
-			?>
+					// Loads the content/singular/page.php template.
+					hybrid_get_content_template();
 
-		</div><!-- .content -->
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() ) :
+						comments_template();
+					endif;
+				}
+				?>
 
-		<?php get_sidebar(); ?>
+			</div><!-- #primary -->
 
-	</div><!-- .row -->
-</div><!-- .container -->
+			<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
+
+		</div><!-- .row -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>
