@@ -4,7 +4,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php hybrid_attr( 'body' ); ?>>
 
 <header <?php hybrid_attr( 'header' ); ?>>
 	<div class="container">
