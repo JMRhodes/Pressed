@@ -7,38 +7,32 @@
 
 get_header(); ?>
 
-<div class="container">
-	<div class="row">
-	
-		<div class="col-sm-8 content content--404" role="main">
+	<div class="container">
+		<div class="row">
 
-			<header class="entry__header">
-				<h1 class="hdg hdg--1">
-					<?php _e( 'Page Not Found', 'pressed' ); ?>
-				</h1>
-			</header><!-- .entry__header -->
+			<div <?php hybrid_attr( 'primary' ); ?>>
 
-			<div class="entry__content">
+				<header class="entry__header">
+					<h1 class="hdg hdg--1">
+						<?php _e( 'Page Not Found', 'pressed' ); ?>
+					</h1>
+				</header><!-- .entry__header -->
 
-				<?php 
-				_e( '<p>It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:</p>', 'pressed' );
-				
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main_menu',
-						'container_class' => 'entry-content-menu',
-						'depth' => 1,
-					)
-				);
-				?>
+				<div class="entry__content">
 
-			</div><!-- .page-content -->
+					<?php
+					_e( '<p>It looks like the page you&rsquo;re looking for doesn&rsquo;t exist. Perhaps a quick look through these pages will help you find what you&rsquo;re looking for:</p>', 'pressed' );
 
-		</div><!-- .content -->
+					hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template.
+					?>
 
-		<?php get_sidebar(); ?>
+				</div><!-- .page-content -->
 
-	</div><!-- .row -->
-</div><!-- .container -->
+			</div><!-- .content -->
+
+			<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
+
+		</div><!-- .row -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>
