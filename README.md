@@ -4,14 +4,13 @@
 Pressed requires a minimum of WordPress 4.5.
 
 ## What tools do I need to use Pressed?
-Pressed is built with **Bower** and **Gulp** usage in mind and is the recommended way to use this theme.
-However theme assets should compile just fine using other tools.
+Pressed is built with **Composer** and **Gulp** usage in mind and is the recommended way to use this theme.
 
 ## Getting Started With Pressed
 
 ### Install node.js.
 - Using the command line, navigate to your theme directory
-- Run `npm install` to install Gulp plugins and Bower packages and Composer autoload.
+- Run `npm install` to install Gulp plugins and Composer packages and autoload.
 - Run `gulp` to confirm everything is working
 
 ### What Gulp tasks are included?
@@ -20,14 +19,17 @@ Pressed comes with a few useful Gulp tasks out of the box:
 #### gulp
 The default Gulp task. Runs the `build` task and watches files for changes.
 
-#### gulp Sass
-Compiles and minifies the `style.scss` stylesheet.
+#### gulp sass
+Compiles and minifies the `style.min.scss` stylesheet.
 
-#### gulp javascript
+#### gulp scripts:theme
 Concats and minifies the main JS file.
 
+#### gulp scripts:vendor
+Concats and minifies the vendor JS file.
+
 #### gulp build
-Runs the clean, copy:hc, sass and javascript tasks.
+Runs the sass, scripts:theme, and scripts:vendor tasks.
 
 #### gulp renametheme
 This will rename all references to the theme text domain, function names and any other theme specific names.

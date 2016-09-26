@@ -23,7 +23,7 @@
     "run-sequence": "^1.1.5"
   },
   "scripts": {
-    "postinstall": "composer install && bower install && gulp build",
+    "postinstall": "composer install && gulp build",
     "build": "gulp build",
     "production": "gulp build"
   }

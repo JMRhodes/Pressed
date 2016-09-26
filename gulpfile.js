@@ -74,3 +74,6 @@ gulp.task('watch', function () {
 gulp.task('build', function (done) {
 	sequence(['sass', 'scripts:theme', 'scripts:vendor'], done);
 });
+
+// Default task, run the build
+gulp.task('default', ['build'] );
