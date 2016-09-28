@@ -1,22 +1,22 @@
 {
-  "name": "pressed",
-  "description": "A WordPress starter theme.",
-  "config": {
-    "vendor-dir": "vendor",
-    "bin-dir": "bin"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
-  "require": {
-    "justintadlock/hybrid-core": "^3.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Pressed\\": ""
-    }
-  }
+	"name": "pressed",
+	"description": "A WordPress starter theme.",
+	"config": {
+		"vendor-dir": "vendor",
+		"bin-dir": "bin"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"justintadlock/hybrid-core": "^3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Pressed\\": ""
+		}
+	}
 }

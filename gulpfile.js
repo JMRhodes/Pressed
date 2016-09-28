@@ -76,4 +76,4 @@ gulp.task('build', function (done) {
 });
 
 // Default task, run the build
-gulp.task('default', ['build'] );
+gulp.task('default', ['build']);
