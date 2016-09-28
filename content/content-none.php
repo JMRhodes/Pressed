@@ -15,11 +15,11 @@
 	</header><!-- .entry__header -->
 
 	<div class="page__content">
-		<?php 
+		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) {
-			
+
 			printf( __( '<p>Ready to publish your first post? <a href="%1$s">Get started here</a>.</p>', 'pressed' ), esc_url( admin_url( 'post-new.php' ) ) );
-		
+
 		} elseif ( is_search() ) {
 
 			_e( '<p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>', 'pressed' );
@@ -29,7 +29,7 @@
 
 			_e( '<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>', 'pressed' );
 			get_search_form();
-			
+
 		}
 		?>
 	</div><!-- .page__content -->
