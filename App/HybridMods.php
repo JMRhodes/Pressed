@@ -28,7 +28,15 @@ class HybridMods {
 	 */
 	public function attrPrimaryContent( array $attr, $context = '' ) {
 		$attr['id']    = 'primary';
-		$attr['class'] = 'content-area col-sm-8';
+		$attr['class'] = 'content-area';
+
+		switch( $context ) {
+			case 'full' :
+				$attr['class'] .= ' col-sm-12';
+				break;
+			default:
+				$attr['class'] .= ' col-sm-8';
+		}
 
 		return $attr;
 	}
