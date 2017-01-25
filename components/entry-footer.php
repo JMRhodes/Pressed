@@ -9,12 +9,12 @@
 ?>
 
 <footer class="entry__footer">
-	<?php
-	hybrid_post_terms( [
-		'taxonomy' => 'category',
-		'text'     => __( 'Posted in: %s', 'pressed' )
-	] );
+    <?php
+    hybrid_post_terms( [
+        'taxonomy' => 'category',
+        'text'     => __( 'Posted in: %s', 'pressed' )
+    ] );
 
-	edit_post_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' );
-	?>
+    edit_post_link( __( 'Edit', 'pressed' ), '<span class="edit-link">', '</span>' );
+    ?>
 </footer><!-- .entry__footer -->
