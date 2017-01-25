@@ -5,6 +5,7 @@
  * @package Pressed
  */
 
+use Pressed\App\Core\Init;
 use Pressed\App\Setup;
 use Pressed\App\Scripts;
 use Pressed\App\HybridMods;
@@ -30,9 +31,11 @@ new Hybrid();
  * Theme Setup
  */
 add_action( 'after_setup_theme', function () {
-    ( new Setup() )->addHooks();
-    ( new Scripts() )->addHooks();
-    ( new HybridMods() )->addHooks();
+    ( new Init() )
+        ->add( new Setup() )
+        ->add( new Scripts() )
+        ->add( new HybridMods() )
+        ->initialize();
 
     // Translation setup
     load_theme_textdomain( 'pressed', get_template_directory() . '/languages' );

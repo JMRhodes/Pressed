@@ -2,13 +2,15 @@
 
 namespace Pressed\App;
 
+use Pressed\App\Interfaces\WordPressHooks;
+
 /**
  * Class HybridMods
  * Hybrid Core compatibility and modifications.
  *
  * @package Pressed\App
  */
-class HybridMods {
+class HybridMods implements WordPressHooks {
 
     /**
      * Add class hooks.

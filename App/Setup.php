@@ -2,12 +2,14 @@
 
 namespace Pressed\App;
 
+use Pressed\App\Interfaces\WordPressHooks;
+
 /**
  * Class Setup
  *
  * @package Pressed\App
  */
-class Setup {
+class Setup implements WordPressHooks {
 
     /**
      * Add class hooks.
