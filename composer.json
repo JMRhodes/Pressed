@@ -1,9 +1,10 @@
 {
-  "name": "pressed",
-  "description": "A WordPress starter theme.",
+  "name": "adlon",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
   "config": {
-    "vendor-dir": "vendor",
-    "bin-dir": "bin"
+    "preferred-install": "dist"
   },
   "repositories": [
     {
@@ -12,11 +13,44 @@
     }
   ],
   "require": {
-    "justintadlock/hybrid-core": "^3.0"
+    "php": ">=5.6",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "^4.7",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/debug-bar": "0.9",
+    "wpackagist-plugin/developer": "1.2.6",
+    "wpackagist-plugin/regenerate-thumbnails": "2.2.6",
+    "wpackagist-plugin/user-switching": "1.0.9",
+    "wpackagist-plugin/wp-migrate-db": "0.9.2",
+    "wpackagist-plugin/wordpress-seo": "4.9"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5.1"
+  },
+  "extra": {
+    "installer-paths": {
+      "app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "wp"
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs --ignore=wp/,vendor/ -n -s ."
+    ]
   },
   "autoload": {
     "psr-4": {
-      "Pressed\\": ""
+      "PRSSD\\": "app/themes/pressed"
     }
   }
 }

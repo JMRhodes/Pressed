@@ -1,46 +1,45 @@
-# Pressed
-**Pressed, the WordPress starter theme.**
+# Lothian Salvage
+## Requirements
 
-Pressed requires a minimum of WordPress 4.5.
+* PHP >= 5.6
+* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
-## What tools do I need to use Pressed?
-Pressed is built with **Composer** and **Gulp** usage in mind and is the recommended way to use this theme.
+## Features
 
-## Getting Started With Pressed
+* Better folder structure
+* Dependency management with [Composer](http://getcomposer.org)
+* Easy WordPress configuration with environment specific files
+* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
+* Autoloader for mu-plugins (use regular plugins as mu-plugins)
+* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
 
-### Install node.js.
-- Using the command line, navigate to your theme directory
-- Run `npm install` to install Gulp plugins and Composer packages and autoload.
-- Run `gulp` to confirm everything is working
+## Installation
 
-### What Gulp tasks are included?
-Pressed comes with a few useful Gulp tasks out of the box:
+1. Copy `.env.example` to `.env` and update environment variables:
+  * `DB_NAME` - Database name
+  * `DB_USER` - Database user
+  * `DB_PASSWORD` - Database password
+  * `DB_HOST` - Database host
+  * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
+  * `WP_HOME` - Full URL to WordPress home (http://example.com)
+  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+  * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
-#### gulp
-The default Gulp task. Runs the `build` task and watches files for changes.
+  Or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-salt].
 
-#### gulp sass
-Compiles and minifies the `style.min.scss` stylesheet.
+2. Access WP admin at `http://example.com/wp/wp-admin`
 
-#### gulp scripts:theme
-Concats and minifies the main JS file.
+## API Documentation
 
-#### gulp scripts:vendor
-Concats and minifies the vendor JS file.
+API documentation is available here:
+* [https://github.com/ackmann-dickenson/adlon/tree/master/app/themes/lothian/App/Http/api-documentation](https://github.com/ackmann-dickenson/adlon/tree/master/app/themes/lothian/App/Http/api-documentation)
 
-#### gulp build
-Runs the sass, scripts:theme, and scripts:vendor tasks.
+## Deploying
 
-#### gulp renametheme
-This will rename all references to the theme text domain, function names and any other theme specific names.
-*To use this task please make sure you change the `THEME` variable in `gulpfile.js` before running this task.*
+Your key needs to be installed on the server for deployment to succeed. You will also need the Ansible vault password.
 
-## Copyright and License
-The following resources are included or used in part within the theme package.
-
-* [Hybrid Core](http://themehybrid.com/) by Justin Tadlock - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
-* [Underscores](http://underscores.me/) by Automattic, Inc. - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
-
-All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
-
-2016 &copy; [Justin Rhodes](http://rhodescodes.com).
+* Install Ansible v2.2 or greater. Use Homebrew, or the Pip (the recommended way): https://valdhaus.co/writings/ansible-mac-osx/
+* In Terminal, change into the home directory of the application
+* Run `/bin/bash provisioning/bin/deploy <environment> <branch>`, for example:  `/bin/bash provisioning/deploy staging master`
+* Enter the vault password when prompted.
+* Code is checked out from Github into a new directory. Config file changes are applied. The build script runs. The new directory becomes the webroot.

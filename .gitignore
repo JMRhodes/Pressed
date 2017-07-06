@@ -1,21 +1,44 @@
-# Ignored theme files
-/.idea/*
-*.sass-cache*
-*.log
+# Application
+app/upgrade
+app/uploads
+
+# WordPress
+.htaccess
+debug.log
+wp
+
+# WordPress Plugins
+app/plugins/debug-bar
+app/plugins/developer
+app/plugins/regenerate-thumbnails
+app/plugins/user-switching
+app/plugins/wordpress-seo
+app/plugins/wp-migrate-db
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+composer.phar
 
 # Vendor (e.g. Composer)
 vendor
-!vendor/.gitkeep
+!app/themes/pressed/vendor
 
 # Ignore build directory
 build
-/languages/*.pot
 
 # Node Package Manager
 node_modules
+bower_components
 
-# Mac
-*.DS_Store
-thumbs.db
+# Ignored theme files
+*.sass-cache*
+*.log
 .idea
-

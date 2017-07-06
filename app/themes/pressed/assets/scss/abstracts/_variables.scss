@@ -1,0 +1,39 @@
+/* Variables
+ * chir.ag/projects/name-that-color
+----------------------------------------------- */
+$white: #ffffff;
+$seashell: #f1f1f1;
+$mercury: #E4E4E4;
+$tundora: #494949;
+$mine-shaft: #252525;
+$black: #000000;
+
+/* Media queries breakpoints
+----------------------------------------------- */
+$screen-xs: 480px;
+$screen-phone: $screen-xs;
+
+$screen-sm: 768px;
+$screen-tablet: $screen-sm;
+
+$screen-md: 992px;
+$screen-desktop: $screen-md;
+
+$screen-lg: 1200px;
+$screen-lg-desktop: $screen-lg;
+
+$screen-xl: 1440px;
+$screen-xl-desktop: $screen-xl;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+
+/* Grid System
+----------------------------------------------- */
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-float-breakpoint: $screen-tablet;
+$container-tablet: ((720px + $grid-gutter-width));
+$container-desktop: ((940px + $grid-gutter-width));
+$container-lg-desktop: ((1170px + $grid-gutter-width));
