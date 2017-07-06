@@ -1,8 +1,9 @@
-# Lothian Salvage
+# Pressed
 ## Requirements
 
 * PHP >= 5.6
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+* Yarn - [Install](https://yarnpkg.com/en/docs/getting-started)
 
 ## Features
 
@@ -27,19 +28,15 @@
 
   Or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-salt].
 
-2. Access WP admin at `http://example.com/wp/wp-admin`
+2. run `composer install` in root dir.
+3. Navigate to `app/themes/pressed/` and run `yarn` to install dev dependencies and build theme assets.
+4. Access WP admin at `http://example.com/wp/wp-admin`
 
-## API Documentation
+## Environmental Checks
+The `wp-config.php` should define `WP_ENV` as `dev` for local development. Production checks should be flagged by this constant not being defined for fail safe reason. *ie* `<?php if ( !defined('WP_ENV') ): ?>`
 
-API documentation is available here:
-* [https://github.com/ackmann-dickenson/adlon/tree/master/app/themes/lothian/App/Http/api-documentation](https://github.com/ackmann-dickenson/adlon/tree/master/app/themes/lothian/App/Http/api-documentation)
-
-## Deploying
-
-Your key needs to be installed on the server for deployment to succeed. You will also need the Ansible vault password.
-
-* Install Ansible v2.2 or greater. Use Homebrew, or the Pip (the recommended way): https://valdhaus.co/writings/ansible-mac-osx/
-* In Terminal, change into the home directory of the application
-* Run `/bin/bash provisioning/bin/deploy <environment> <branch>`, for example:  `/bin/bash provisioning/deploy staging master`
-* Enter the vault password when prompted.
-* Code is checked out from Github into a new directory. Config file changes are applied. The build script runs. The new directory becomes the webroot.
+## Resources
+1. [PSR-4 Autoloader](http://www.php-fig.org/psr/psr-4/)
+2. [BEM Introduction](http://getbem.com/introduction/)
+3. [Sass 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern)
+4. [Modular JS Pattern](https://toddmotto.com/mastering-the-module-pattern/)
