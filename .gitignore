@@ -7,6 +7,8 @@ app/uploads
 debug.log
 wp
 
+*custom.css*
+
 # WordPress Plugins
 app/plugins/debug-bar
 app/plugins/developer
